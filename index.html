@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chic Trends - Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Chic Trends</h1>
+    <p>Your One-Stop Fashion Destination</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Collection</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="intro">
+    <h2>New Season Launch</h2>
+    <p>Experience the elegance of our latest arrivals</p>
+    <button onclick="alert('Explore collection coming soon!')">Shop Now</button>
+  </section>
+
+  <section class="video-section">
+    <h2>Fashion In Motion</h2>
+    <video controls width="70%">
+      <source src="fashion-intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="subscribe">
+    <h2>Join Our Newsletter</h2>
+    <input type="email" id="email" placeholder="Enter your email" />
+    <button onclick="subscribe()">Subscribe</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Chic Trends. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function subscribe() {
+      const email = document.getElementById('email').value;
+      if (email) {
+        alert("Thanks for subscribing, " + email + "!");
+        document.getElementById('email').value = "";
+      } else {
+        alert("Please enter a valid email.");
+      }
+    }
+  </script>
+</body>
+</html>
