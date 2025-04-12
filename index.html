@@ -2,57 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chic Trends - Fashion Store</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>Chic Trends</h1>
-    <p>Your One-Stop Fashion Destination</p>
+  <header class="navbar">
+    <h1>Fashion Store</h1>
+    <nav>
+      <ul>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">🌓</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Collection</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <section class="intro">
-    <h2>New Season Launch</h2>
-    <p>Experience the elegance of our latest arrivals</p>
-    <button onclick="alert('Explore collection coming soon!')">Shop Now</button>
+  <section class="hero">
+    <h2>New Arrivals</h2>
+    <p>Discover the latest fashion trends!</p>
+    <a href="#products" class="button">Shop Now</a>
   </section>
 
-  <section class="video-section">
-    <h2>Fashion In Motion</h2>
-    <video controls width="70%">
-      <source src="fashion-intro.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+  <section id="products" class="product-section">
+    <h2>Our Collection</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x250" alt="Dress" />
+        <h3>Summer Dress</h3>
+        <p>$49.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x250" alt="Shoes" />
+        <h3>Stylish Shoes</h3>
+        <p>$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- Add more products as needed -->
+    </div>
   </section>
 
-  <section class="subscribe">
-    <h2>Join Our Newsletter</h2>
-    <input type="email" id="email" placeholder="Enter your email" />
-    <button onclick="subscribe()">Subscribe</button>
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="button">Send</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Chic Trends. All rights reserved.</p>
+    <p>&copy; 2025 Fashion Store. All rights reserved.</p>
   </footer>
-
-  <script>
-    function subscribe() {
-      const email = document.getElementById('email').value;
-      if (email) {
-        alert("Thanks for subscribing, " + email + "!");
-        document.getElementById('email').value = "";
-      } else {
-        alert("Please enter a valid email.");
-      }
-    }
-  </script>
 </body>
 </html>
